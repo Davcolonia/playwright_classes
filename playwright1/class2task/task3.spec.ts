@@ -1,6 +1,12 @@
 import {test, expect} from "@playwright/test";
-
+import { allure } from "allure-playwright";
 test("Task 28 APR March | 👋 🧪 Project#3 -App.vwo.com", async ({ page }) => {
+      await allure.epic("VWO login tests");
+      await allure.description("Verify that login page works");
+      await allure.feature("Essential features");
+      await allure.story("Authentication");
+
+   
     await page.goto("https://vwo.com/free-trial/?utm_medium=website&utm_source=login-page&utm_campaign=mof_eg_loginpage");
 
     let emailField = page.locator("#page-v1-step1-email");
