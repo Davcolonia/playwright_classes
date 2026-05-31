@@ -1,10 +1,7 @@
 import {test, expect } from "@playwright/test";
 
 test("verify that the login works", async ({ page }) => {
-    // let balance: number = 0.00;
-    // let transferAmount=4500.00;
-    // let expectedFinalBalnce: number=0.00;
-
+   
         
     await page.goto("https://tta-bank-digital-973242068062.us-west1.run.app/");
     await page.waitForTimeout(1000);
