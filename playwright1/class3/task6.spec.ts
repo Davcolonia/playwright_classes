@@ -9,6 +9,15 @@ await expect(
     page.getByRole("cell", { name: "Kabir.Khan", exact: true })
 ).toBeVisible();
 
+await page
+    .locator("tr:has(td:text('Rohan.Mehta'))")
+    .locator("td")
+    .first()
+    .click();
+
+await page.waitForTimeout(5000);
+
+//await page.locator("//td[text()='Rohan.Mehta']/preceding-sibling::td");
     await page.getByLabel("Select Kabir.Khan").check();
     await expect(page.getByLabel("Select Kabir.Khan")).toBeChecked();
 
